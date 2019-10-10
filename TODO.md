@@ -1,0 +1,1 @@
+# Image sized properly and perhaps multiple sizes
