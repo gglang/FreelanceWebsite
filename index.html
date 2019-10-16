@@ -3,8 +3,10 @@
 
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Gerald Lang</title>
-    <link rel="stylesheet" href="/Resources/Styles/styles.css">
+    <link rel="stylesheet" href="/Resources/Styles/General.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins|Roboto&display=swap" rel="stylesheet">
     <script defer src="/Resources/Scripts/General.js"></script>
     <script defer src="/Resources/Scripts/BlogWidgetCreator.js"></script>
 </head>
@@ -14,23 +16,31 @@
 
     </header>
     <main>
-        <figure>
-            <h1>Advanced Website Development</h1>
-            <p>I specialize in giving your business a facelift, without those costly and socially dubious botox
-                injections.</p>
-            <p>With me, your business will give better first impressions than your competitors, and make you money. Plus
-                SEO and stuff.</p>
-            <picture>
-                <source
-                    srcset="/Resources/Images/hahaha.jpg, /Resources/Images/hahaha2x.jpg 2x, /Resources/Images/hahaha3x.jpg 3x"
-                    media="(max-width: 799px)">
-                <source
-                    srcset="/Resources/Images/duckies.jpg, /Resources/Images/duckies2x.jpg 2x, /Resources/Images/duckies.jpg 3x"
-                    media="(min-width: 800px)">
-                <img src="/Resources/Images/duckies.jpg" alt="Gerald amusing himself."
-                    srcset="/Resources/Images/duckies2x.jpg 2x, /Resources/Images/duckies3x.jpg 3x">
-            </picture>
-        </figure>
+        <section>
+            <div class="splashContainer">
+                <div class="splashImageText">
+                    <h1>Advanced Website Development</h1>
+                </div>
+                <picture>
+                    <source
+                        srcset="/Resources/Images/hahaha.jpg, /Resources/Images/hahaha2x.jpg 2x, /Resources/Images/hahaha3x.jpg 3x"
+                        media="(max-width: 799px)">
+                    <source
+                        srcset="/Resources/Images/duckies.jpg, /Resources/Images/duckies2x.jpg 2x, /Resources/Images/duckies.jpg 3x"
+                        media="(min-width: 800px)">
+                    <img src="/Resources/Images/duckies.jpg" alt="Gerald amusing himself."
+                        srcset="/Resources/Images/duckies2x.jpg 2x, /Resources/Images/duckies3x.jpg 3x">
+                </picture>
+            </div>
+            <p>
+                I specialize in giving your business a facelift, without those costly and socially dubious botox
+                injections.
+            </p>
+            <p>
+                With me, your business will give better first impressions than your competitors, and make you money.
+                Plus SEO and stuff.
+            </p>
+        </section>
         <section>
             <h2>So you want to build a website?</h2>
             <p>
@@ -41,17 +51,17 @@
         </section>
         <section>
             <h2>Some Happy Clients</h2>
-            <section>
-                <h2>Joe's Renovation</h2>
+            <figure>
+                <h3>Joe's Renovation</h3>
                 <a href="https://joesrenovation.com/" target="_blank"><img src="Resources/Images/joesrenovation.png"
                         width="3320" height="1892"></a>
                 <blockquote>
                     <p>Gerald really did a bang up job here. My clients totally love my website.</p>
                     <footer>- Joe Rogan, founder of Joe's Renovation</footer>
                 </blockquote>
-            </section>
-            <section>
-                <h2>Jack's Renovation</h2>
+            </figure>
+            <figure>
+                <h3>Jack's Renovation</h3>
                 <a href="https://jacksrenovation.com/" target="_blank"><img src="Resources/Images/jacksrenovation.png"
                         width="3320" height="1892"></a>
                 <blockquote>
@@ -61,16 +71,16 @@
                     </p>
                     <footer>-Jack Black, Homeless</footer>
                 </blockquote>
-            </section>
-            <section>
-                <h2>John's Renovation</h2>
+            </figure>
+            <figure>
+                <h3>John's Renovation</h3>
                 <a href="https://johnsrenovation.com/" target="_blank"><img src="Resources/Images/johnsrenovation.png"
                         width="3320" height="1892"></a>
                 <blockquote>
                     <p>Well then... He asked me for a testimonial... hrmph.</p>
-                    <footer>John Snow, Wall Enthusiast</footer>
+                    <footer>-John Snow, Wall Enthusiast</footer>
                 </blockquote>
-            </section>
+            </figure>
         </section>
         <section id="BlogWidgets">
             <h2>Featured Blog Posts</h2>
@@ -79,7 +89,7 @@
             <a class="BlogLink" href="/BlogArticles/websitesAreCritical.html"></a>
         </section>
         <section id="ContactForm">
-            
+
         </section>
     </main>
     <footer id="MainFooter">
