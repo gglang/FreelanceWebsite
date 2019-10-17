@@ -45,12 +45,12 @@ async function createBlogWidget(articleInfo) {
     let img = document.createElement("img");
     img.src = articleInfo.titleImagePath;
     img.alt = articleInfo.titleImageAltText;
-    let figcaption = document.createElement("figcaption");
-    figcaption.innerText = articleInfo.mainTitle.trim();
+    let articleTitle = document.createElement("h3");
+    articleTitle.innerText = articleInfo.mainTitle.trim();
 
     // Compose article widget parts and add to document
     figure.appendChild(img);
-    figure.appendChild(figcaption);
+    figure.appendChild(articleTitle);
     link.appendChild(figure);
     document.querySelector("#BlogWidgets").appendChild(link); // TODO Append in order of date of creation of article... Teehee.
 }

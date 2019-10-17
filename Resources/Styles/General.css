@@ -4,6 +4,12 @@ p, h1, h2, h3, blockquote, figure, header, body {
     margin: 0rem;
 }
 
+ul {
+    margin: 0rem;
+    padding: 0rem;
+    list-style-type: none;
+}
+
 /* END RESET STYLES */
 
 
@@ -73,14 +79,84 @@ blockquote {
     padding: 1.5rem;
 }
 
-figcaption {
+#BlogWidgets h3 {
     text-align: center;
     padding: 1.5rem;
+}
+
+#BlogWidgets a:link,
+#BlogWidgets a:active,
+#BlogWidgets a:visited,
+#BlogWidgets a:hover {
+    text-decoration: none;
+}
+
+/* Footer */
+#MainFooter {
+    color: #aaa;
+    text-align: center;
+}
+
+#MainFooter a:link,
+#MainFooter a:active,
+#MainFooter a:visited,
+#MainFooter a:hover {
+    text-decoration: none;
+}
+
+#MainFooter a:link {
+    color: #aaa;
+}
+
+#MainFooter a:active {
+    color: #888;
+}
+
+#MainFooter a:visited {
+    color: #aaa;
+}
+
+#MainFooter a:hover {
+    color: #999;
+}
+
+#MainFooter ul {
+    padding-top: 4em;
+}
+
+#MainFooter li {
+    margin: 1.25em;
+    margin-top: 0em;
+}
+
+#MainFooter li:last-child {
+    margin-bottom: 0em;
+}
+
+#MainFooter li a {
+    margin: auto;
+    text-align: center;
+}
+
+#MainFooter a.fab {
+    font-size: 3rem;
+    margin: 0rem 1rem;
+}
+
+#Copyright {
+    font-size: 0.75rem;
+    line-height: 1.15em;
+    padding-top: 4rem;
+    padding-bottom: 1em;
 }
 
 /* Background colors */
 main>section:nth-child(even) {
     background-color: #F0F0F0
+}
+
+#MainFooter {
+    background-color: #222222;
 }
 
 
