@@ -1,49 +1,14 @@
-/* Mobile First Styling */
-
-/* Text Styles */
-
-html {
-    font-family: 'Roboto', sans-serif;
-    font-size: 16px; /* Most browser defaults */
-    text-align: left;
-}
-
-h1, h2, h3 {
-    color: #8F2027;
-    font-family: 'Poppins', sans-serif;
-    font-weight: bold;
-    text-align: center;
-}
-
-body {
-    font-size: 1rem;
-    line-height: 1.25em;
-}
-
-h1 {
-    font-size: 2rem;
-    line-height: 1.25em;
-}
-
-h2 {
-    font-size: 1.625rem;
-    line-height: 1.15384615em;
-}
-
-h3 {
-    font-size: 1.375rem;
-    line-height: 1.13636364em;
-}
+/* RESET STYLES */
 
 p, h1, h2, h3 {
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
+    margin: 0rem;
 }
 
-#logo {
-    max-width: 25%;
-    height: auto;
-}
+/* END RESET STYLES */
+
+
+
+/* General section/content spacing */
 
 header {
     border-bottom: 1px solid grey;
@@ -54,11 +19,44 @@ body {
     margin: 0rem;
 }
 
+.sectionContent {
+    width: 85%;
+    margin: 4rem auto;
+}
+
+p {
+    padding-bottom: 0.7rem;
+}
+
+h3 { /* TEMP? */
+    padding-bottom: 0.7rem;
+}
+
+h2 {
+    padding-bottom: 1.4em;
+}
+
+.sectionContent>*:last-child {
+    padding-bottom: 0rem;
+}
+
+main>section {
+    margin: 0rem 0rem;
+    overflow: auto;
+}
+
+/* END General spacing */
+
+
+
+
+/* Misc */
 img {
     max-width: 100%;
     height: auto;
 }
 
+/* Figure stuff... */
 figure {
     margin: 0.5rem;
     padding: 0rem 0.5rem;
@@ -71,18 +69,80 @@ figure img {
     border: 1px solid lightgrey;
 }
 
+/* Background colors */
 main>section:nth-child(even) {
     background-color: #F0F0F0
 }
 
-main>section {
-    margin: 0rem 0.5rem;
-    overflow: auto;
+
+
+/* End Section Internal spacing */
+
+
+
+
+/* Specific widgets */
+
+#logo {
+    max-width: 25%;
+    height: auto;
 }
 
-main>section:first-child {
+/* END Specific widgets */
+
+
+
+/* Splash */
+
+.splashContainer {
+    position: relative;
+}
+
+.splashContainer img {
+    display: block; /* This is needed to make image not have weird line height below it... (it's inline by default) */
+}
+
+.splashImageText {
+    position: absolute;
+    top: 17.31%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* Tricky... % here is of the element's size, not parent element's! */
+}
+
+.splashText {
+    padding: 4rem 0rem;
+}
+
+.splashText {
+    margin: auto;
+    width: 85%;
+}
+
+.splashText>*:last-child {
+    padding-bottom: 0rem;
+}
+
+main>section:first-child .splashContainer {
+    width: 100%;
+}
+
+main>section:first-child img {
+    padding: 0rem;
+    padding-top: 3rem;
+    border-bottom: 1px solid grey;
+}
+
+.splashImageText h1 {
+    padding: 0em 0.25rem;
     margin: 0rem;
 }
+
+/* END Splash */
+
+
+
+/* Block quote stuff */
 
 @font-face {
     font-family: 'et-line';
@@ -133,19 +193,4 @@ blockquote footer {
     content: "\e057";
 }
 
-.splashContainer {
-    position: relative;
-}
-
-.splashImageText {
-    position: absolute;
-    top: 14.31%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    /* Tricky... % here is of the element's size, not parent element's! */
-}
-
-.splashImageText h1 {
-    padding: 0em 0.25rem;
-    margin: 0rem;
-}
+/* END Blockquote stuff */
