@@ -46,7 +46,7 @@ async function createBlogWidget(articleInfo) {
     img.src = articleInfo.titleImagePath;
     img.alt = articleInfo.titleImageAltText;
     let figcaption = document.createElement("figcaption");
-    figcaption.innerText = articleInfo.mainTitle;
+    figcaption.innerText = articleInfo.mainTitle.trim();
 
     // Compose article widget parts and add to document
     figure.appendChild(img);

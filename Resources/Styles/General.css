@@ -1,6 +1,6 @@
 /* RESET STYLES */
 
-p, h1, h2, h3 {
+p, h1, h2, h3, blockquote, figure, header, body {
     margin: 0rem;
 }
 
@@ -10,30 +10,21 @@ p, h1, h2, h3 {
 
 /* General section/content spacing */
 
-header {
-    border-bottom: 1px solid grey;
-    margin: 0rem;
-}
-
-body {
-    margin: 0rem;
-}
-
 .sectionContent {
     width: 85%;
     margin: 4rem auto;
 }
 
 p {
-    padding-bottom: 0.7rem;
-}
-
-h3 { /* TEMP? */
-    padding-bottom: 0.7rem;
+    padding-bottom: 0.7em;
 }
 
 h2 {
-    padding-bottom: 1.4em;
+    padding-bottom: 1.6em;
+}
+
+h3 {
+    padding-bottom: 0.7em;
 }
 
 .sectionContent>*:last-child {
@@ -56,17 +47,35 @@ img {
     height: auto;
 }
 
-/* Figure stuff... */
+header {
+    border-bottom: 1px solid grey;
+}
+
+/* Figure/blockquote stuff... */
 figure {
-    margin: 0.5rem;
-    padding: 0rem 0.5rem;
-    padding-top: 0.5rem;
-    border: 1px solid lightgrey;
     background-color: #F0F0F0;
+    border-radius: 20px;
+    margin-bottom: 1.75rem;
+    box-shadow: 1px 1px 20px 0px rgba(0, 0, 0, 0.2);
+}
+
+#BlogWidgets figure {
+    box-shadow: 1px 1px 20px 0px rgba(0, 0, 0, 0.3); /* It is on a grey background, so darker */
 }
 
 figure img {
-    border: 1px solid lightgrey;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    display: block;
+}
+
+blockquote {
+    padding: 1.5rem;
+}
+
+figcaption {
+    text-align: center;
+    padding: 1.5rem;
 }
 
 /* Background colors */
@@ -139,58 +148,3 @@ main>section:first-child img {
 }
 
 /* END Splash */
-
-
-
-/* Block quote stuff */
-
-@font-face {
-    font-family: 'et-line';
-    src: url('/Resources/Fonts/et-line.eot');
-    src: url('/Resources/Fonts/et-line.eot?#iefix') format('embedded-opentype'), url('/Resources/Fonts/et-line.woff') format('woff'), url('/Resources/Fonts/et-line.ttf') format('truetype'), url('/Resources/Fonts/et-line.svg#et-line') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-
-blockquote {
-    margin: 0rem;
-    margin-bottom: 0.5rem;
-    display: grid;
-    grid-template-areas:
-    "header header header header"
-    "quoteIcon quote quote quote"
-    "quoteIcon cite cite cite";
-    grid-auto-columns: 17% 1fr 1fr 1fr;
-}
-
-blockquote h3 {
-    grid-area: header;
-}
-blockquote p {
-    grid-area: quote;
-}
-blockquote .quoteIcon {
-    grid-area: quoteIcon;
-    display: flex;
-}
-blockquote footer {
-    grid-area: cite;
-}
-
-.quoteIcon::before {
-    margin: auto;
-    padding: 0rem 0.75rem 0rem 0.25rem;
-    font-family: 'et-line';
-    font-style: normal;
-    font-weight: bold;
-    font-size: 2.5rem;
-    font-variant: normal;
-    text-transform: none;
-    line-height: 1.25em;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    color: #8F2027;
-    content: "\e057";
-}
-
-/* END Blockquote stuff */
