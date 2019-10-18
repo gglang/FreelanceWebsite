@@ -10,9 +10,43 @@ ul {
     list-style-type: none;
 }
 
+button {
+    border: none;
+    margin: 0;
+    padding: 0;
+    width: auto;
+    overflow: visible;
+    background: transparent;
+    /* inherit font & color from ancestor */
+    color: inherit;
+    font: inherit;
+    /* Normalize `line-height`. Cannot be changed from `normal` in Firefox 4+. */
+    line-height: normal;
+    /* Corrects font smoothing for webkit */
+    -webkit-font-smoothing: inherit;
+    -moz-osx-font-smoothing: inherit;
+    /* Corrects inability to style clickable `input` types in iOS */
+    -webkit-appearance: none;
+}
+
+button:active {
+    outline: none;
+}
+
+button::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+
 /* END RESET STYLES */
 
+/* VARIABLES */
 
+:root {
+    --main-accent-color: #8F2027;
+}
+
+/* END VARIABLES */
 
 /* General section/content spacing */
 
@@ -44,20 +78,19 @@ main>section {
 
 /* END General spacing */
 
-
-
-
 /* Misc */
+
+button {
+    cursor: pointer;
+}
+
 img {
     max-width: 100%;
     height: auto;
 }
 
-header {
-    border-bottom: 1px solid grey;
-}
-
 /* Figure/blockquote stuff... */
+
 figure {
     background-color: #F0F0F0;
     border-radius: 20px;
@@ -66,7 +99,8 @@ figure {
 }
 
 #BlogWidgets figure {
-    box-shadow: 1px 1px 20px 0px rgba(0, 0, 0, 0.3); /* It is on a grey background, so darker */
+    box-shadow: 1px 1px 20px 0px rgba(0, 0, 0, 0.3);
+    /* It is on a grey background, so darker */
 }
 
 figure img {
@@ -84,23 +118,65 @@ blockquote {
     padding: 1.5rem;
 }
 
-#BlogWidgets a:link,
-#BlogWidgets a:active,
-#BlogWidgets a:visited,
-#BlogWidgets a:hover {
+#BlogWidgets a:link, #BlogWidgets a:active, #BlogWidgets a:visited, #BlogWidgets a:hover {
     text-decoration: none;
 }
 
+/* Header */
+
+#MainHeader {
+    position: sticky;
+    top: 0px;
+    z-index: 9;
+    background-color: #fbfbfb;
+    box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.2);
+}
+
+#MainHeader nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    transition: all 0.7s ease;
+}
+
+#LogoLink {
+    /* Logo link */
+    text-decoration: none;
+    line-height: 0;
+    width: 25%;
+    transition: all 0.7s ease;
+}
+
+#MenuButton {
+    font-size: 1.5rem;
+    color: var(--main-accent-color);
+    padding: 10px 15px; /* Bigger click area! */
+}
+
+#MenuButton .fa-bars {
+    transition: all 1.5s ease,
+    font-size 0.5s;
+}
+
+#MenuButton:hover {
+    font-size: 1.7rem;
+}
+
+.rotationTransformActive {
+    transform: rotateX(180deg);
+}
+
+/* END Header */
+
 /* Footer */
+
 #MainFooter {
     color: #aaa;
     text-align: center;
 }
 
-#MainFooter a:link,
-#MainFooter a:active,
-#MainFooter a:visited,
-#MainFooter a:hover {
+#MainFooter a:link, #MainFooter a:active, #MainFooter a:visited, #MainFooter a:hover {
     text-decoration: none;
 }
 
@@ -146,11 +222,14 @@ blockquote {
 #Copyright {
     font-size: 0.75rem;
     line-height: 1.15em;
-    padding-top: 4rem;
+    padding-top: 3rem;
     padding-bottom: 1em;
 }
 
+/* END Footer */
+
 /* Background colors */
+
 main>section:nth-child(even) {
     background-color: #F0F0F0
 }
@@ -159,23 +238,7 @@ main>section:nth-child(even) {
     background-color: #222222;
 }
 
-
-
 /* End Section Internal spacing */
-
-
-
-
-/* Specific widgets */
-
-#logo {
-    max-width: 25%;
-    height: auto;
-}
-
-/* END Specific widgets */
-
-
 
 /* Splash */
 
@@ -184,12 +247,13 @@ main>section:nth-child(even) {
 }
 
 .splashContainer img {
-    display: block; /* This is needed to make image not have weird line height below it... (it's inline by default) */
+    display: block;
+    /* This is needed to make image not have weird line height below it... (it's inline by default) */
 }
 
 .splashImageText {
     position: absolute;
-    top: 17.31%;
+    top: 21.31%;
     left: 50%;
     transform: translate(-50%, -50%);
     /* Tricky... % here is of the element's size, not parent element's! */
@@ -214,7 +278,7 @@ main>section:first-child .splashContainer {
 
 main>section:first-child img {
     padding: 0rem;
-    padding-top: 3rem;
+    padding-top: 7rem;
     border-bottom: 1px solid grey;
 }
 

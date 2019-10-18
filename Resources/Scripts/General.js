@@ -1,10 +1,15 @@
 function loadHTMLIntoID(filePath, id) {
+    let htmlContainer = document.querySelector("#"+id);
+    if(!htmlContainer) {
+        return;
+    }
+
     let request = new XMLHttpRequest();
     request.open('GET', filePath);
     request.onload = function () {
         if (request.status >= 200 && request.status < 400) {
             let response = request.responseText;
-            document.querySelector("#"+id).innerHTML = response;
+            htmlContainer.innerHTML = response;
         } else {
             console.log("error: "+request.statusText);
         }
