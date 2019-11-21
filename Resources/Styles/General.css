@@ -143,9 +143,13 @@ blockquote {
 #LogoLink {
     /* Logo link */
     text-decoration: none;
-    line-height: 0;
-    width: 25%;
+    width: 4em;
     transition: all 0.7s ease;
+    color: var(--main-accent-color);
+    font-family: 'Lato', sans-serif;
+    text-align: center;
+    font-size: 1.625rem;
+    line-height: 1.6rem;
 }
 
 #MenuButton {
@@ -155,16 +159,57 @@ blockquote {
 }
 
 #MenuButton .fa-bars {
-    transition: all 1.5s ease,
-    font-size 0.5s;
-}
-
-#MenuButton:hover {
-    font-size: 1.7rem;
+    transition: all 1.5s ease, font-size 0.5s;
 }
 
 .rotationTransformActive {
     transform: rotateX(180deg);
+}
+
+#Menu { /* Note this is hacked together to work with the Header.js script*/
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    background-color: #FFF;
+    text-align: center;
+    width: 70%;
+    border-top: 0px solid var(--main-accent-color);
+    padding: 0rem 1rem;
+    max-height: 0px;
+    box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    transition: all 0.5s ease;
+}
+
+#Menu a li {
+    border-bottom: 1px solid #F0F0F0;
+    padding: 10px 10%;
+    transition: background-color 0.3s ease;
+}
+
+#Menu a:last-of-type li {
+    border-bottom: none;
+}
+
+#Menu a:link, #Menu a:active, #Menu a:visited, #Menu a:hover {
+    text-decoration: none;
+}
+
+#Menu a:link, #Menu a:visited {
+    color: #666;
+}
+
+#Menu a:active {
+    color: #333;
+}
+
+#Menu a:hover {
+    color: #555;
+}
+
+#Menu li:hover {
+    background-color: #F8F8F8;
 }
 
 /* END Header */
@@ -180,16 +225,12 @@ blockquote {
     text-decoration: none;
 }
 
-#MainFooter a:link {
+#MainFooter a:link, #MainFooter a:visited {
     color: #aaa;
 }
 
 #MainFooter a:active {
     color: #888;
-}
-
-#MainFooter a:visited {
-    color: #aaa;
 }
 
 #MainFooter a:hover {
