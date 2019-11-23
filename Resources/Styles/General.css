@@ -59,7 +59,7 @@ p {
     padding-bottom: 0.7em;
 }
 
-h2 {
+h1, h2 {
     padding-bottom: 1.6em;
 }
 
@@ -331,6 +331,16 @@ main>section:first-child img {
 /* END Splash */
 
 /* Contact Form */
+
+.RedSection {
+    background-color: var(--main-accent-color)!important;
+}
+
+.RedSection h2,
+.RedSection h3,
+.RedSection p {
+    color: white;
+}
 
 .hidden {
     position: absolute;
