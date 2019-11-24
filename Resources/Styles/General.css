@@ -91,8 +91,35 @@ img {
 
 /* Figure/blockquote stuff... */
 
+.AccentIcon,
+.AccentIcon path,
+.AccentIcon line,
+.AccentIcon polygon,
+.AccentIcon circle,
+.AccentIcon polyline {
+    fill: none;
+    stroke: var(--main-accent-color);
+}
+
+.FilledIcon,
+.FilledIcon path,
+.FilledIcon line,
+.FilledIcon polygon,
+.FilledIcon circle,
+.FilledIcon polyline {
+    fill: var(--main-accent-color);
+}
+
+figure .AccentIcon {
+    width: 7rem;
+    height: auto;
+    padding-bottom: 1.5rem;
+    display: block;
+    margin: 0 auto;
+}
+
 figure {
-    background-color: #F0F0F0;
+    background-color: #FFF;
     border-radius: 20px;
     margin-bottom: 1.75rem;
     box-shadow: 1px 1px 20px 0px rgba(0, 0, 0, 0.2);
@@ -104,6 +131,9 @@ figure {
 }
 
 figure img {
+    /* TODO The fact that figure styling applies to 
+    different kinds of widgets in a non-modular/non-elegant
+    way is a nightmare */
     border-top-right-radius: 20px;
     border-top-left-radius: 20px;
     display: block;
@@ -120,6 +150,14 @@ blockquote {
 
 #BlogWidgets a:link, #BlogWidgets a:active, #BlogWidgets a:visited, #BlogWidgets a:hover {
     text-decoration: none;
+}
+
+.IconFigures figure {
+    padding: 1.5rem!important; /* A man's gotta do what a man's gotta do. */
+}
+
+.IconFigures figure p {
+    padding: 0;
 }
 
 /* Header */
@@ -155,7 +193,8 @@ blockquote {
 #MenuButton {
     font-size: 1.5rem;
     color: var(--main-accent-color);
-    padding: 10px 15px; /* Bigger click area! */
+    padding: 10px 15px;
+    /* Bigger click area! */
 }
 
 #MenuButton .fa-bars {
@@ -166,7 +205,8 @@ blockquote {
     transform: rotateX(180deg);
 }
 
-#Menu { /* Note this is hacked together to work with the Header.js script*/
+#Menu {
+    /* Note this is hacked together to work with the Header.js script*/
     position: absolute;
     top: 100%;
     left: 50%;
@@ -336,9 +376,7 @@ main>section:first-child img {
     background-color: var(--main-accent-color)!important;
 }
 
-.RedSection h2,
-.RedSection h3,
-.RedSection p {
+.RedSection h2, .RedSection h3, .RedSection p {
     color: white;
 }
 
@@ -377,7 +415,7 @@ form textarea {
 form {
     padding: 2.5rem;
     margin-top: 2.5rem;
-    margin-bottom: 4rem; 
+    margin-bottom: 4rem;
 }
 
 .formCard {
@@ -394,7 +432,6 @@ form button {
     padding: 1rem;
     font-weight: 700;
     font-size: 0.9rem;
-    
 }
 
 form .alightContentsRight {
