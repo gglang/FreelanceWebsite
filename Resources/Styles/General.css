@@ -188,6 +188,10 @@ blockquote:last-of-type {
     padding: 0;
 }
 
+.portfolioSection img {
+    padding-bottom: 1rem;
+}
+
 /* Header */
 
 #MainHeader {
