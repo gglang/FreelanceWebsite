@@ -1,27 +1,18 @@
 // TODO BUG FIX: When small phones are on landscape, the sticky header will make the menu not fully visible
 
-// This is needed to wait for the navbar to actually be
-// inserted into the document by another script 
-// (and wait for the document reload) teehee
-document.addEventListener("readystatechange", afterLoadSetup);
-
 let logo;
 let navbar;
 let mobileMenu;
-function afterLoadSetup(event) {
-    if (event.target.readyState === "complete") {
-        let menuButton = document.querySelector("#MenuButton");
-        menuButton.addEventListener("click", menuButtonClicked);
+let menuButton = document.querySelector("#MenuButton");
+menuButton.addEventListener("click", menuButtonClicked);
 
-        window.addEventListener("scroll", headerScruncher,
-            { capture: false, passive: true }); /* Let UI thread do stuff before my event */
+window.addEventListener("scroll", headerScruncher,
+    { capture: false, passive: true }); /* Let UI thread do stuff before my event */
 
-        // Init some state... teehee
-        logo = document.getElementById("LogoLink");
-        navbar = document.querySelector("nav");
-        mobileMenu = document.getElementById("Menu")
-    }
-}
+// Init some state... teehee
+logo = document.getElementById("LogoLink");
+navbar = document.querySelector("nav");
+mobileMenu = document.getElementById("Menu")
 
 function menuButtonClicked() {
     // Remove the focus outline from a mouseclick!
