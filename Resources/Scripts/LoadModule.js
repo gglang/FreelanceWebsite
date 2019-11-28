@@ -33,4 +33,3 @@ function addScript(JSFileName) {
 loadHTMLIntoID("/Resources/HTMLTemplates/topbar.html", "MainHeader", "/Resources/Scripts/Header.js");
 loadHTMLIntoID("/Resources/HTMLTemplates/footer.html", "MainFooter")
 loadHTMLIntoID("/Resources/HTMLTemplates/contactForm.html", "ContactForm")
-loadHTMLIntoID("/Resources/HTMLTemplates/moreArticles.html", "MoreArticles")

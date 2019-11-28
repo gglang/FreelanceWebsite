@@ -472,3 +472,32 @@ form .alightContentsRight {
 }
 
 /* END Contact Form */
+
+/* Blog specific */
+
+.blogArticle h2 {
+    padding: 1em 0em;
+    text-align: left;
+}
+
+.blogArticle h3 {
+    padding: 0.6em 0em;
+    text-align: left;
+}
+
+.blogArticle .moreArticlesHeader,
+.blogArticle #ContactForm h2  {
+    padding-top: 0;
+    padding-bottom: 1.6em;
+}
+
+#TitleImage {
+    padding-top: 0em;
+    border: none;
+}
+
+.blogArticle .post-metadata {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: -1rem;
+}
