@@ -233,51 +233,76 @@ blockquote:last-of-type {
     transform: rotateX(180deg);
 }
 
-#Menu {
-    /* Note this is hacked together to work with the Header.js script*/
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    transform: translate(-50%, 0%);
-    background-color: #FFF;
-    text-align: center;
-    width: 70%;
-    border-top: 0px solid var(--main-accent-color);
-    padding: 0rem 1rem;
-    max-height: 0px;
-    box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.2);
-    overflow: hidden;
-    transition: all 0.5s ease;
-}
-
-#Menu a li {
-    border-bottom: 1px solid #F0F0F0;
-    padding: 10px 10%;
-    transition: background-color 0.3s ease;
-}
-
-#Menu a:last-of-type li {
-    border-bottom: none;
-}
-
 #Menu a:link, #Menu a:active, #Menu a:visited, #Menu a:hover {
     text-decoration: none;
 }
 
-#Menu a:link, #Menu a:visited {
-    color: #666;
+@media (max-width: 799px) {
+    #Menu {
+        /* Note this is hacked together to work with the Header.js script */
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        background-color: #FFF;
+        text-align: center;
+        width: 70%;
+        border-top: 0px solid var(--main-accent-color);
+        padding: 0rem 1rem;
+        max-height: 0px;
+        box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.2);
+        overflow: hidden;
+        transition: all 0.5s ease;
+    }
+    #Menu a li {
+        border-bottom: 1px solid #F0F0F0;
+        padding: 10px 10%;
+        transition: background-color 0.3s ease;
+    }
+    #Menu a:last-of-type li {
+        border-bottom: none;
+    }
+    #Menu a:link, #Menu a:visited {
+        color: #666;
+    }
+    #Menu a:active {
+        color: #333;
+    }
+    #Menu a:hover {
+        color: #555;
+    }
+    #Menu li:hover {
+        background-color: #F8F8F8;
+    }
 }
 
-#Menu a:active {
-    color: #333;
-}
-
-#Menu a:hover {
-    color: #555;
-}
-
-#Menu li:hover {
-    background-color: #F8F8F8;
+@media (min-width: 800px) {
+    #MenuButton {
+        display: none;
+    }
+    #Menu ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        align-items: center;
+    }
+    #Menu {
+        width: 50%;
+    }
+    #Menu a {
+        font-weight: 700;
+        transition: all 0.3s ease;
+        margin: 0 1em;
+    }
+    #Menu a:link, #Menu a:visited {
+        color: var(--main-accent-color);
+    }
+    #Menu a:active {
+        color: var(--main-accent-color)
+    }
+    #Menu a:hover {
+        color: #4b1b1f;
+    }
 }
 
 /* END Header */
@@ -344,11 +369,9 @@ blockquote:last-of-type {
         margin: 0 auto;
         padding-top: 1em;
     }
-
     #MainFooter li {
         margin-bottom: 0rem;
     }
-
     #Copyright {
         padding: 1em;
     }
