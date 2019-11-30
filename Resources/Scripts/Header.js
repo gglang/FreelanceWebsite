@@ -34,8 +34,10 @@ function menuButtonClicked() {
 }
 
 function headerScruncher() {
-    let scrunchHeight = 20;
-    if (document.documentElement.scrollTop > scrunchHeight || document.body.scrollTop > scrunchHeight) {
+    let body = document.body; //IE 'quirks'
+    let activeDocument = document.documentElement; //IE with doctype
+    activeDocument = (activeDocument.clientHeight) ? activeDocument : body;
+    if (activeDocument.scrollTop != 0) {
         logo.style.fontSize = "1.25rem"
         logo.style.lineHeight = "1.25rem";
         navbar.style.padding = "5px";
