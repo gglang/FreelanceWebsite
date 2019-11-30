@@ -39,20 +39,22 @@ async function getArticleInfo(articlePath) {
 
 async function createBlogWidget(articleInfo) {
     // Build article widget parts
-    let link = document.createElement("a");
-    link.href = articleInfo.articlePath;
     let figure = document.createElement("figure");
     let img = document.createElement("img");
+    let link = document.createElement("a");
+    link.href = articleInfo.articlePath;
     img.src = articleInfo.titleImagePath;
     img.alt = articleInfo.titleImageAltText;
+    let articleTitleContainer = document.createElement("div");
     let articleTitle = document.createElement("h3");
     articleTitle.innerText = articleInfo.mainTitle.trim();
 
     // Compose article widget parts and add to document
-    figure.appendChild(img);
-    figure.appendChild(articleTitle);
-    link.appendChild(figure);
-    document.querySelector("#BlogWidgets").appendChild(link); // TODO Append in order of date of creation of article... Teehee.
+    link.appendChild(img);
+    figure.appendChild(link);
+    articleTitleContainer.appendChild(articleTitle);
+    figure.appendChild(articleTitleContainer);
+    document.querySelector("#BlogWidgets").appendChild(figure); // TODO Append in order of date of creation of article... Teehee.
 }
 
 createBlogWidgets(createBlogWidget);

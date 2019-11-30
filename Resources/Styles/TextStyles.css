@@ -2,7 +2,8 @@
 
 html {
     font-family: 'Roboto', sans-serif;
-    font-size: 16px; /* Most browser defaults */
+    font-size: 16px;
+    /* Most browser defaults */
     font-weight: 400;
     text-align: left;
 }
@@ -16,7 +17,8 @@ h1, h2, h3 {
 
 body {
     font-size: 1rem;
-    line-height: 1.8em; /* This looks better, but was against recommendation on site... */
+    line-height: 1.8em;
+    /* This looks better, but was against recommendation on site... */
 }
 
 h1 {
@@ -32,4 +34,12 @@ h2 {
 h3 {
     font-size: 1.25rem;
     line-height: 1.25em;
+}
+
+/* Responsiveness */
+
+@media (min-width: 800px) {
+    html {
+        font-size: 20px;
+    }
 }

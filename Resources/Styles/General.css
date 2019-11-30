@@ -91,22 +91,12 @@ img {
 
 /* Figure/blockquote stuff... */
 
-.AccentIcon,
-.AccentIcon path,
-.AccentIcon line,
-.AccentIcon polygon,
-.AccentIcon circle,
-.AccentIcon polyline {
+.AccentIcon, .AccentIcon path, .AccentIcon line, .AccentIcon polygon, .AccentIcon circle, .AccentIcon polyline {
     fill: none;
     stroke: var(--main-accent-color);
 }
 
-.FilledIcon,
-.FilledIcon path,
-.FilledIcon line,
-.FilledIcon polygon,
-.FilledIcon circle,
-.FilledIcon polyline {
+.FilledIcon, .FilledIcon path, .FilledIcon line, .FilledIcon polygon, .FilledIcon circle, .FilledIcon polyline {
     fill: var(--main-accent-color);
 }
 
@@ -125,6 +115,10 @@ figure {
     box-shadow: 1px 1px 20px 0px rgba(0, 0, 0, 0.2);
 }
 
+figure blockquote {
+    border-radius: 0 0 20px 20px;
+}
+
 #BlogWidgets figure {
     box-shadow: 1px 1px 20px 0px rgba(0, 0, 0, 0.3);
     /* It is on a grey background, so darker */
@@ -140,8 +134,7 @@ figure img {
 }
 
 blockquote {
-    padding: 2rem 1.5rem 1.5rem 1.5rem;
-    margin-bottom: 2rem;
+    padding: 1.5rem;
     font-size: 0.9em;
     line-height: 1.25rem;
     text-align: center;
@@ -150,7 +143,8 @@ blockquote {
 
 .testimonial {
     position: relative;
-    margin-bottom: 2rem;    
+    margin-bottom: 2rem;
+    padding-top: 2rem;
 }
 
 blockquote footer {
@@ -168,7 +162,8 @@ blockquote footer {
 }
 
 blockquote:last-of-type {
-    padding-bottom: 1.5rem!important; /* More toxic masculinity */
+    padding-bottom: 1.5rem!important;
+    /* More toxic masculinity */
 }
 
 #BlogWidgets h3 {
@@ -181,7 +176,8 @@ blockquote:last-of-type {
 }
 
 .IconFigures figure {
-    padding: 1.5rem!important; /* A man's gotta do what a man's gotta do. */
+    padding: 1.5rem!important;
+    /* A man's gotta do what a man's gotta do. */
 }
 
 .IconFigures figure p {
@@ -485,8 +481,7 @@ form .alightContentsRight {
     text-align: left;
 }
 
-.blogArticle .moreArticlesHeader,
-.blogArticle #ContactForm h2  {
+.blogArticle .moreArticlesHeader, .blogArticle #ContactForm h2 {
     padding-top: 0;
     padding-bottom: 1.6em;
 }
@@ -500,4 +495,46 @@ form .alightContentsRight {
     color: #666;
     font-size: 0.9rem;
     margin-bottom: -1rem;
+}
+
+/* Responsiveness */
+
+.sectionContent {
+    max-width: 680px;
+    /* Recommended maximum for text content at 20px size */
+}
+
+.cardContent {
+    max-width: 85%;
+    margin-bottom: 2.25rem;
+    /* Another hack because negative margins on bottom cause overlap and scrolling */
+}
+
+.listOfCards {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    margin: 0 -0.875rem;
+}
+
+.listOfCards figure {
+    max-width: 440px;
+    margin-left: 0.875rem;
+    margin-right: 0.875rem;
+}
+
+.ServiceTypesSection .listOfCards figure {
+    max-width: 390px;
+}
+
+.listOfCards figure {
+    display: flex;
+    flex-direction: column;
+}
+
+.listOfCards figure>div {
+    flex-grow: 1;
+    display: flex;
+    /* HACK Apparently to center the header, I need a flex inside a flex inside a flex? Kek. */
+    align-items: center;
 }
