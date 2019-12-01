@@ -417,6 +417,7 @@ main>section:nth-child(even) {
 .splashText {
     margin: auto;
     width: 85%;
+    max-width: 680px;
 }
 
 .splashText>*:last-child {
